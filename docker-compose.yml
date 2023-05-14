@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  django:
+    container_name: django
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/src
+    ports:
+      - "8100:8100"
+  postgres:
+    image: postgres:15.3
+    hostname: postgres
+    container_name: postgres
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - local_pg_data:/var/lib/postgresql/data
+
+volumes:
+  local_pg_data:
+    driver: "local"

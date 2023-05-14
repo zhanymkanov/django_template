@@ -1,0 +1,6 @@
+django==4.2.1
+psycopg2==2.9.6
+pydantic==1.10.7
+
+uvicorn[standard]==0.22.0
+django-admin-sortable2==2.1.8

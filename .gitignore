@@ -1,0 +1,5 @@
+.env
+static/
+.idea
+.cache/
+.ruff_cache
