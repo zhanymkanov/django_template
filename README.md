@@ -3,10 +3,10 @@
 This is a Django project template for Django 4.2 that I use to start new projects.
 - Docker, docker-compose
 - Pydantic for configs loading
-- Simple logging
-- Dev with uvicorn, deploy with gunicorn
+- Configured with uvicorn for async compatibility
 - [just](https://github.com/casey/just) for shortcuts
 - black + ruff for linting
+- Simple logging
 
 ### How to start working
 Prerequisites:
@@ -52,4 +52,3 @@ Django shortcuts:
 - `just mm *app_name* -n *migration_name*` - create a migration for the _app_name_ called _migration_name_
 - `just django` - run django management command
 - `just startapp *app_name*` - create a new app called _app_name_
-- 
